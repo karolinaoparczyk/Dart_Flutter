@@ -1,0 +1,23 @@
+@startsalt
+{SI
+..
+workout1
+<&image>
+Description
+[   show   ]
+[  delete  ]
+..
+workout2
+<&image>
+Description
+[   show   ]
+[  delete  ]
+..
+workout3
+<&image>
+Description
+[   show   ]
+[  delete  ]
+..
+}
+@endsalt
