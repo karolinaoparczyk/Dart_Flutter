@@ -1,0 +1,20 @@
+@startuml
+[*] --> Database
+Database : workout in database
+
+Database --> Server
+Server : workout on the Server
+
+Server --> Client
+Client : workout with Client
+
+Client --> Application
+Application : workout in application
+
+Application --> Widget
+Widget : workout added to widget
+
+Widget --> Screen
+Screen : workout displayed on screen
+Screen --> [*]
+@enduml

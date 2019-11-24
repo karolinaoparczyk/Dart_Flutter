@@ -1,0 +1,35 @@
+------------------------
+state_diagram.png
+
+@startuml
+[*] --> Database
+Database : workout in database
+
+Database --> Server
+Server : workout on the Server
+
+Server --> Client
+Client : workout with Client
+
+Client --> Application
+Application : workout in application
+
+Application --> Widget
+Widget : workout added to widget
+
+Widget --> Screen
+Screen : workout displayed on screen
+Screen --> [*]
+@enduml
+
+PlantUML version 1.2019.12(Sun Nov 03 10:24:54 UTC 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+
+------------------------
