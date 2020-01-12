@@ -1,0 +1,7 @@
+@startuml
+:Start application;
+:Display workouts;
+:Scroll through workouts;
+:Stop application;
+end
+@enduml
