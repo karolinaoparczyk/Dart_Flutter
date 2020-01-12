@@ -1,0 +1,20 @@
+------------------------
+component_diagram.png
+
+@startuml
+[Observables] - [Reactions] : notify
+[Actions] - [Observables] : mutate
+[Reactions] - [Actions] : fire
+@enduml
+
+PlantUML version 1.2020.00(Sat Jan 11 13:30:53 CET 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_231-b11
+Operating System: Windows 10
+Default Encoding: Cp1250
+Language: en
+Country: GB
+
+------------------------

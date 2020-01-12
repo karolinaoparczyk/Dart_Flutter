@@ -1,0 +1,5 @@
+@startuml
+[Observables] - [Reactions] : notify
+[Actions] - [Observables] : mutate
+[Reactions] - [Actions] : fire
+@enduml
