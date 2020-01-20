@@ -1,23 +1,27 @@
 @startsalt
 {SI
+[<&person>Workouts     ]
 ..
-workout1
+"   workout1   "
 <&image>
-Description
-[   show   ]
-[  delete  ]
 ..
-workout2
+"   workout2   "
 <&image>
-Description
-[   show   ]
-[  delete  ]
 ..
-workout3
+"   workout3   "
 <&image>
-Description
-[   show   ]
-[  delete  ]
+..
+"   workout4   "
+<&image>
+..
+"   workout5   "
+<&image>
+..
+"   workout6   "
+<&image>
+..
+"   workout7   "
+<&image>
 ..
 }
 @endsalt
