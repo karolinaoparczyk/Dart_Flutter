@@ -1,0 +1,26 @@
+@startsalt
+{SI
+[  Workout1     ]
+..
+"   exercise1   "
+<&image>
+<&external-link> link to youtube
+"  description  "
+..
+"   exercise2   "
+<&image>
+<&external-link> link to youtube
+"  description  "
+..
+"   exercise3   "
+<&image>
+<&external-link> link to youtube
+"  description  "
+..
+"   exercise4   "
+<&image>
+<&external-link> link to youtube
+"  description  "
+..
+}
+@endsalt
