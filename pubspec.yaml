@@ -24,16 +24,30 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
 
+  mobx:
+  flutter_mobx:
+
+  mongo_dart:
+  shared_preferences:
+  sprintf:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  draggable_scrollbar:
+  path_provider:
 
+  build_runner:
+  mobx_codegen:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
+  assets:
+    - assets/images/
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
