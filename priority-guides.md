@@ -2,3 +2,6 @@ For the application to work properly we need:
 - a list of workouts
 - window showing all workouts
 - widgets displaying details about workouts
+- a list of exercises of a workout
+- window showing all exercises
+- widgets displaying details about exercises
