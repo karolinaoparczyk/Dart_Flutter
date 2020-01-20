@@ -1,13 +1,11 @@
 import 'dart:convert';
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../models/workoutmodel.dart';
 import 'package:path_provider/path_provider.dart';
 
-
-getPath() async{
+getPath() async {
   final directory = await getApplicationDocumentsDirectory();
   return directory.path;
 }
@@ -35,28 +33,29 @@ class WorkoutWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               new Container(
-                child: new Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
+                  child: new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
                     new Center(
-                      child: new Text(workoutItem.name,
-                        style: new TextStyle(fontSize: 20.0,
-                            fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.right,),
-    ),
-                      new Center(
-                        child: _getImage(workoutItem.imageBin),
-    ),
+                      child: new Text(
+                        workoutItem.name,
+                        style: new TextStyle(
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.right,
+                      ),
+                    ),
                     new Center(
-                      child: new Text(workoutItem.description,
-                          style: new TextStyle(fontSize: 16.0),
-                      textAlign: TextAlign.justify,)
-                    )
-                    ]
-    )
-              )
-                  ],
-                ),
+                      child: _getImage(workoutItem.imageBin),
+                    ),
+                    new Center(
+                        child: new Text(
+                      workoutItem.description,
+                      style: new TextStyle(fontSize: 16.0),
+                      textAlign: TextAlign.justify,
+                    ))
+                  ]))
+            ],
+          ),
         ),
         Divider(
           color: Colors.grey,
