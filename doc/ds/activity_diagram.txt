@@ -1,7 +1,11 @@
 @startuml
-:Start application;
-:Display workouts;
-:Scroll through workouts;
-:Stop application;
-end
+(*) --> "Start application"
+"Start application" --> "Display workouts"
+"Display workouts" --> "Scroll through workouts"
+if "Show workout's exercises" then
+  -->[true] "Scroll through exercises"
+  -right-> "Stop application"
+else
+  -->[false] "Stop application"
+endif
 @enduml
