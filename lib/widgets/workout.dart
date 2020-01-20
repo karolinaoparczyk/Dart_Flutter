@@ -46,7 +46,12 @@ class WorkoutWidget extends StatelessWidget {
     ),
                       new Center(
                         child: _getImage(workoutItem.imageBin),
-    )
+    ),
+                    new Center(
+                      child: new Text(workoutItem.description,
+                          style: new TextStyle(fontSize: 16.0),
+                      textAlign: TextAlign.justify,)
+                    )
                     ]
     )
               )
