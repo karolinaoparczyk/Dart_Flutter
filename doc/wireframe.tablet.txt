@@ -1,0 +1,26 @@
+@startsalt
+{
+Workouts | Workout1
+..|..
+"   workout1   "|"   exercise1   "
+<&image>|"     20 rep    "
+" description  "|<&image>
+..|"  description  "
+"   workout2   "|..
+<&image>|"   exercise2   "
+" description  "|"     20 rep    "
+..|<&image>
+"   workout3   "|"  description  "
+<&image>|..
+" description  "|"   exercise3   "
+..|"     10 rep    "
+"   workout4   "|<&image>
+<&image>|"  description  "
+" description  "|..
+..|"   exercise4   "
+"   workout5   "|"     20 rep    "
+<&image>|<&image>
+" description  "|"  description  "
+..|..
+}
+@endsalt

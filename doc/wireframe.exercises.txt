@@ -1,25 +1,24 @@
 @startsalt
-{SI
-[  Workout1     ]
+{Workout1
 ..
 "   exercise1   "
+"     20 rep    "
 <&image>
-<&external-link> link to youtube
 "  description  "
 ..
 "   exercise2   "
+"     20 rep    "
 <&image>
-<&external-link> link to youtube
 "  description  "
 ..
 "   exercise3   "
+"     10 rep    "
 <&image>
-<&external-link> link to youtube
 "  description  "
 ..
 "   exercise4   "
+"     20 rep    "
 <&image>
-<&external-link> link to youtube
 "  description  "
 ..
 }
