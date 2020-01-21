@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ipm1920_p2/widgets/readMoreText.dart';
 import '../models/workoutmodel.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -48,11 +49,17 @@ class WorkoutWidget extends StatelessWidget {
                       child: _getImage(workoutItem.imageBin),
                     ),
                     new Center(
-                        child: new Text(
-                      workoutItem.description,
-                      style: new TextStyle(fontSize: 23.0),
-                      textAlign: TextAlign.justify,
-                    ))
+                      child: ReadMoreText(
+                        workoutItem.description,
+                        trimLines: 3,
+                        colorClickableText: Colors.green,
+                        trimMode: TrimMode.Line,
+                        trimCollapsedText: '...Expand',
+                        trimExpandedText: ' Collapse ',
+                        style: new TextStyle(fontSize: 20.0),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
                   ]))
             ],
           ),
