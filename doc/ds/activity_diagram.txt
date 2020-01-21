@@ -3,9 +3,17 @@
 "Start application" --> "Display workouts"
 "Display workouts" --> "Scroll through workouts"
 if "Show workout's exercises" then
-  -->[true] "Scroll through exercises"
+  -->"Scroll through exercises"
+  if "Perform workout" then
+    -->"Display exercises with timer"
+        if "Stop" then
+            -->"Wait for action"
+            -->"Display exercises with timer"
+        if "Skip" then
+            -->"Next exercise"
+            -->"Display exercises with timer"
+    if "End workout" then
+        --> "Scroll through exercises"
   -right-> "Stop application"
-else
-  -->[false] "Stop application"
 endif
 @enduml
