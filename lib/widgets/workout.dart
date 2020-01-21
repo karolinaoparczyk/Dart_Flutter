@@ -40,7 +40,7 @@ class WorkoutWidget extends StatelessWidget {
                       child: new Text(
                         workoutItem.name,
                         style: new TextStyle(
-                            fontSize: 20.0, fontWeight: FontWeight.bold),
+                            fontSize: 30.0, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.right,
                       ),
                     ),
@@ -50,7 +50,7 @@ class WorkoutWidget extends StatelessWidget {
                     new Center(
                         child: new Text(
                       workoutItem.description,
-                      style: new TextStyle(fontSize: 16.0),
+                      style: new TextStyle(fontSize: 23.0),
                       textAlign: TextAlign.justify,
                     ))
                   ]))

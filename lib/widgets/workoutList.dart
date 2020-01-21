@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:ipm1920_p2/models/exercisemodel.dart';
 import 'package:ipm1920_p2/models/workoutmodel.dart';
 import 'package:ipm1920_p2/widgets/workout.dart';
 import 'package:draggable_scrollbar/draggable_scrollbar.dart';
@@ -8,10 +7,8 @@ import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 class WorkoutList extends StatelessWidget {
   WorkoutList(
       {@required this.workouts,
-      @required this.exercises,
       @required this.itemSelectedCallback});
   final List<WorkoutModel> workouts;
-  final List<ExerciseModel> exercises;
   final ScrollController _rrectController = ScrollController();
   final ValueChanged<WorkoutModel> itemSelectedCallback;
 

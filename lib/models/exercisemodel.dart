@@ -5,9 +5,10 @@ class ExerciseModel {
   final dynamic description;
   final String image;
   final String video;
+  final String reps;
 
   ExerciseModel({@required this.name, @required this.description,
-    @required this.image, @required this.video});
+    @required this.image, @required this.video, this.reps});
 
   factory ExerciseModel.fromJson(Map<String, dynamic> parsedJson) {
     return ExerciseModel(
@@ -15,6 +16,7 @@ class ExerciseModel {
       description: parsedJson['description'],
       image: parsedJson['image'].cast<int>(),
       video: parsedJson['video'],
+      reps: parsedJson['reps'],
     );
   }
 
@@ -24,6 +26,7 @@ class ExerciseModel {
       'description': this.description,
       'image': this.image,
       'video': this.video,
+      'reps': this.reps,
     };
   }
 }

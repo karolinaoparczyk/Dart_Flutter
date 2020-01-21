@@ -5,11 +5,10 @@ import 'package:ipm1920_p2/models/workoutmodel.dart';
 import 'package:ipm1920_p2/widgets/exercise.dart';
 import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 
-
 class ExerciseList extends StatelessWidget {
-  ExerciseList({@required this.exercises, @required this.workout});
-  final List<ExerciseModel> exercises;
+  ExerciseList({@required this.workout, @required this.exercises});
   WorkoutModel workout;
+  List<ExerciseModel> exercises;
   final ScrollController _rrectController2 = ScrollController();
 
   @override
@@ -20,18 +19,25 @@ class ExerciseList extends StatelessWidget {
       ),
       body: Container(
         child: Observer(
-          builder: (_) => exercises.isNotEmpty
+          builder: (_) => checkIfExists(exercises)
               ? DraggableScrollbar.semicircle(
                   controller: _rrectController2,
                   backgroundColor: Colors.grey,
                   heightScrollThumb: 50,
                   child: ListView(
                     controller: _rrectController2,
-                    children: getExercises(exercises, workout),
+                    children: exercises.map((item) {
+                      return _initExercises(item);
+                    }).toList(),
                   ),
                 )
-              : new Center(
-                  child: new CircularProgressIndicator(),
+              : new ListTile(
+                  title: Text(
+                    "Select a workout to see details",
+                    style: new TextStyle(
+                        fontSize: 20.0, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
         ),
       ),
@@ -39,29 +45,21 @@ class ExerciseList extends StatelessWidget {
   }
 }
 
+checkIfExists(List<ExerciseModel> exercises) {
+  if (exercises != null) {
+    if (exercises.isNotEmpty)
+      return true;
+    else
+      return false;
+  } else
+    return false;
+}
+
 getWorkoutName(WorkoutModel workout) {
   if (workout != null)
     return workout.name;
   else
     return "";
-}
-
-getExercises(List<ExerciseModel> exercises, WorkoutModel workout) {
-  if (workout != null) {
-    return exercises.map((item) {
-      return _initExercises(item);
-    }).toList();
-  } else {
-    return <Widget>[
-      ListTile(
-        title: Text(
-          "Please choose a workout",
-          style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.center,
-        ),
-      ),
-    ];
-  }
 }
 
 Widget _initExercises(ExerciseModel exercise) {

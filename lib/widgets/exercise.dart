@@ -32,16 +32,21 @@ class ExerciseWidget extends StatelessWidget {
                       children: <Widget>[
                         new Center(
                           child: new Text(exerciseItem.name,
-                            style: new TextStyle(fontSize: 20.0,
+                            style: new TextStyle(fontSize: 30.0,
                                 fontWeight: FontWeight.bold),
                             textAlign: TextAlign.right,),
+                        ),
+                        new Center(
+                          child: new Text(exerciseItem.reps,
+                          style: new TextStyle(color: Colors.green[800],
+                          fontSize: 35.0))
                         ),
                         new Center(
                           child: _getImage(exerciseItem.image),
                         ),
                         new Center(
                             child: new Text(exerciseItem.description,
-                              style: new TextStyle(fontSize: 16.0),
+                              style: new TextStyle(fontSize: 23.0),
                               textAlign: TextAlign.justify,)
                         )
                       ]
