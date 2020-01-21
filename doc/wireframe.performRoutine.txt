@@ -1,0 +1,19 @@
+@startsalt
+{Workout1
+..|*
+..|*
+Exercise 1/20|*
+..|*
+..|*
+Time remaining: 25 sek|*
+..|*
+..|*
+<&image>|*
+..|*
+..|*
+..|*
+[Start/Stop]|[Skip]
+..|*
+..|*
+}
+@endsalt

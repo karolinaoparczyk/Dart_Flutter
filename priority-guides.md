@@ -5,3 +5,7 @@ For the application to work properly we need:
 - a list of exercises of a workout
 - window showing all exercises
 - widgets displaying details about exercises
+- button to start performing workout
+- window displaying exercises in order
+- timer
+- buttons allowing stop/start/skip exercise
