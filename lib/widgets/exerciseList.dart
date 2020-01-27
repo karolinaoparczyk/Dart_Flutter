@@ -4,11 +4,12 @@ import 'package:ipm1920_p2/models/exercisemodel.dart';
 import 'package:ipm1920_p2/models/workoutmodel.dart';
 import 'package:ipm1920_p2/widgets/exercise.dart';
 import 'package:draggable_scrollbar/draggable_scrollbar.dart';
+import 'file:///C:/Users/Admin/AndroidStudioProjects/ipm1920_p2/lib/screens/performWorkout.dart';
 
 class ExerciseList extends StatelessWidget {
   ExerciseList({@required this.workout, @required this.exercises});
   WorkoutModel workout;
-  List<ExerciseModel> exercises;
+  final List<ExerciseModel> exercises;
   final ScrollController _rrectController2 = ScrollController();
 
   @override
@@ -41,6 +42,14 @@ class ExerciseList extends StatelessWidget {
                 ),
         ),
       ),
+      floatingActionButton: new FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => PerformWorkout(exercises)));
+        },
+          label: Text("Start workout", style: TextStyle(fontSize: 18.0),),
+          icon: Icon(Icons.play_circle_outline),
+        highlightElevation: 40.0,)
     );
   }
 }

@@ -95,17 +95,17 @@ class WorkoutState extends State<Workout> {
               reps: exercisesOfWorkout[i][1]);
         }
       }
-       if (found == false){
-          exercise = new ExerciseModel(
-              name: exercisesOfWorkout[i][0],
-              description: "",
-              image: "",
-              video: "",
-              reps: exercisesOfWorkout[i][1]);
-        }
-        exercises.add(exercise);
+      if (found == false) {
+        exercise = new ExerciseModel(
+            name: exercisesOfWorkout[i][0],
+            description: "",
+            image: "",
+            video: "",
+            reps: exercisesOfWorkout[i][1]);
       }
+      exercises.add(exercise);
     }
+  }
 
   Widget _buildMobileLayout() {
     return Scaffold(
@@ -121,12 +121,10 @@ class WorkoutState extends State<Workout> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => ExerciseList(
-                            exercises: item.exercises,
-                            workout: item,
-                          )),
+                          exercises: item.exercises, workout: item)),
                 );
               },
-            ))
+            )),
           ],
         ),
       ),
@@ -177,7 +175,7 @@ class WorkoutState extends State<Workout> {
   }
 }
 
-getExercises(WorkoutModel workout){
+getExercises(WorkoutModel workout) {
   if (workout != null)
     return workout.exercises;
   else
