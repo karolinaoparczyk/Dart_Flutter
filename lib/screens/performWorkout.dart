@@ -27,7 +27,7 @@ class PerformWorkoutState extends State<PerformWorkout> {
           title: Text('Perform workout'),
         ),
         body: Center(
-            child: PerformExerciseWidget(currentExercise: widget.exercises[0],
+            child: PerformExercise(currentExercise: widget.exercises[0],
                 exercises: widget.exercises)));
   }
 }
