@@ -87,71 +87,94 @@ class PerformExerciseState extends State<PerformExercise>
   Widget build(BuildContext context) {
     _mycontext = context;
     return Scaffold(
-      body: Container(
-          child: Observer(
-              builder: (_) => ListView(children: <Widget>[
-                    Container(
-                        child: Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  new Center(
-                                      child: Text(
-                                    widget.currentExercise.name,
-                                    style: new TextStyle(fontSize: 30),
-                                    textAlign: TextAlign.justify,
-                                  )),
-                                  AnimatedBuilder(
-                                    animation: controller,
-                                    builder:
-                                        (BuildContext context, Widget child) {
-                                      return Text(
-                                          "${(controller.duration * controller.value).inMinutes}:${((controller.duration * controller.value).inSeconds % 60)}"
-                                              .padLeft(2, '0'),
-                                          style: TextStyle(fontSize: 40));
-                                    },
-                                  ),
-                                  new Center(
-                                    child: widget.currentExercise.description ==
-                                            ""
-                                        ? _getImage(
-                                            widget.currentExercise.image)
-                                        : Text(
-                                            widget.currentExercise.description,
-                                            style: TextStyle(fontSize: 20),
-                                            textAlign: TextAlign.justify,
-                                          ),
-                                  ),
-                                  AnimatedBuilder(
+        body: Container(
+            child: Observer(
+                builder: (_) => ListView(children: <Widget>[
+                      Container(
+                          child: Padding(
+                              padding: EdgeInsets.all(10.0),
+                              child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    new Center(
+                                        child: Text(
+                                      widget.currentExercise.name,
+                                      style: new TextStyle(fontSize: 30),
+                                      textAlign: TextAlign.justify,
+                                    )),
+                                    AnimatedBuilder(
                                       animation: controller,
-                                      builder: (context, child) {
-                                        return FloatingActionButton.extended(
-                                            onPressed: () {
-                                              var temp = controller.isAnimating;
-                                              if (controller.isAnimating)
-                                                controller.stop();
-                                              else {
-                                                controller.reverse(
-                                                    from:
-                                                        controller.value == 0.0
+                                      builder:
+                                          (BuildContext context, Widget child) {
+                                        return Text(
+                                            "${(controller.duration * controller.value).inMinutes}:${((controller.duration * controller.value).inSeconds % 60)}"
+                                                .padLeft(2, '0'),
+                                            style: TextStyle(fontSize: 40));
+                                      },
+                                    ),
+                                    new Center(
+                                      child: widget.currentExercise
+                                                  .description ==
+                                              ""
+                                          ? _getImage(
+                                              widget.currentExercise.image)
+                                          : Text(
+                                              widget
+                                                  .currentExercise.description,
+                                              style: TextStyle(fontSize: 23),
+                                              textAlign: TextAlign.justify,
+                                            ),
+                                    ),
+                                    AnimatedBuilder(
+                                        animation: controller,
+                                        builder: (context, child) {
+                                          return new Center(
+                                              child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.center
+                                                  ,children: <Widget>[
+                                            FloatingActionButton.extended(
+                                                heroTag: "btn1",
+                                                onPressed: () {
+                                                  var temp =
+                                                      controller.isAnimating;
+                                                  if (controller.isAnimating)
+                                                    controller.stop();
+                                                  else {
+                                                    controller.reverse(
+                                                        from: controller
+                                                                    .value ==
+                                                                0.0
                                                             ? 1.0
                                                             : controller.value);
-                                              }
-                                              setState(() {
-                                                isAnimated = temp;
-                                              });
-                                            },
-                                            icon: Icon(!isAnimated
-                                                ? Icons.pause
-                                                : Icons.play_arrow),
-                                            label: Text(!isAnimated
-                                                ? "Pause"
-                                                : "Play"));
-                                      }),
-                                ])))
-                  ]))),
-    );
+                                                  }
+                                                  setState(() {
+                                                    isAnimated = temp;
+                                                  });
+                                                },
+                                                icon: Icon(!isAnimated
+                                                    ? Icons.pause
+                                                    : Icons.play_arrow),
+                                                label: Text(!isAnimated
+                                                    ? "Pause"
+                                                    : "Play", style:
+                                                TextStyle(fontSize: 18.0))),
+                                            FloatingActionButton.extended(
+                                              heroTag: "btn2",
+                                              onPressed: () {
+                                                goToNext();
+                                              },
+                                              label: Text(
+                                                "Skip",
+                                                style:
+                                                    TextStyle(fontSize: 18.0),
+                                              ),
+                                              icon: Icon(Icons.skip_next),
+                                              highlightElevation: 40.0,
+                                            )
+                                          ]));
+                                        }),
+                                  ])))
+                    ]))));
   }
 }
 
